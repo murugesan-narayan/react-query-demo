@@ -12,6 +12,7 @@ import { RQDynamicParallelQueriesPage } from './components/RQDynamicParallelQuer
 import { RQDependentQueriesPage } from './components/RQDependentQueries.page'
 import { RQPaginatedQueriesPage } from './components/RQPaginatedQueries.page'
 import { RQInfiniteQueriesPage } from './components/RQInfiniteQueries.page'
+import { RQAddSuperHeroPage } from './components/RQAddSuperHero.page'
 
 const queryClient = new QueryClient()
 
@@ -51,7 +52,15 @@ function App() {
               </li>
             </ul>
           </nav>
+          <nav>
+            <ul>
+              <li>
+                <Link to='/add-super-hero'>Add Super Hero</Link>
+              </li>
+            </ul>
+          </nav>
           <Routes>
+            <Route path='/add-super-hero' element={<RQAddSuperHeroPage />} />
             <Route path='/rq-paginated' element={<RQPaginatedQueriesPage />} />
             <Route path='/rq-infinite' element={<RQInfiniteQueriesPage />} />
             <Route path='/super-heroes' element={<SuperHeroesPage />} />

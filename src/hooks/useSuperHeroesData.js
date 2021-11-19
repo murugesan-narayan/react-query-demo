@@ -1,7 +1,10 @@
 import { useQuery } from 'react-query'
-import axios from 'axios'
+//import axios from 'axios'
+import { request } from '../utils/axios-utils'
 
-const fetchSuperHeroes = () => axios.get('http://localhost:5555/superheroes')
+//const fetchSuperHeroes = () => axios.get('http://localhost:5555/superheroes')
+
+const fetchSuperHeroes = () => request({ url: '/superheroes' })
 
 const cacheConfig = {
   cacheTime: 300000, // 5 mins  - The duration until inactive queries will be removed from the cache.

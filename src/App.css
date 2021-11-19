@@ -10,3 +10,9 @@ nav ul li {
   list-style-type: none;
   margin-right: 16px;
 }
+
+label {
+  display: inline-block;
+  width: 70px;
+  text-align: left;
+}
